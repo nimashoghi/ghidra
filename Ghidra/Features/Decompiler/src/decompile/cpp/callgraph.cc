@@ -211,8 +211,8 @@ CallGraphNode *CallGraph::addNode(Funcdata *f)
 { // Add a node, based on an existing function -f-
   CallGraphNode &node( graph[f->getAddress()] );
 
-  if ((node.getFuncdata() != (Funcdata *)0)&&(node.getFuncdata() != f))
-    throw LowlevelError("Functions with duplicate entry points: "+f->getName()+" "+node.getFuncdata()->getName());
+  // if ((node.getFuncdata() != (Funcdata *)0)&&(node.getFuncdata() != f))
+  //   throw LowlevelError("Functions with duplicate entry points: "+f->getName()+" "+node.getFuncdata()->getName());
 
   node.entryaddr = f->getAddress();
   node.name = f->getName();
